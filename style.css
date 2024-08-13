@@ -1,0 +1,54 @@
+/*mobile first approach  */
+/*at larger screen card should be centered
+webpage should look ok on small screen 320px and larger screens 1400px
+*/
+
+@font-face {
+  font-family: "Outfit";
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+  font-weight: 100 1000;
+}
+@font-face {
+  font-family: "young-serif";
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+}
+
+/*------------------------------------------CSS RESET---------------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*------------------------------------------CUSTOM VARIABLES---------------------------------- */
+:root {
+  --small-font: 1rem;
+
+  --white: #ffffff;
+  --stone-100: #f3e6d8;
+  --stone-150: #e4ded8;
+  --stone-600: #5f574e;
+  --stone-900: #302d2c;
+  --brown-800: #854632;
+  --rose-800: #7b284f;
+  --rose-50: #fff5fa;
+}
+
+/*------------------------------------------CONTAINER STYLES----------------------------------  */
+
+/*------------------------------------------CARD STYLES----------------------------------  */
+h1.intro-title {
+  font-family: "Outfit", sans-serif;
+  /*  font-family: "young-serif , sans-serif"; */
+  /* font-weight: 1000; */
+}
+
+/*Attribution STYLES:(WON'T be centered on mobile) */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
