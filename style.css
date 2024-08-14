@@ -1,6 +1,7 @@
 /*mobile first approach  */
 /*at larger screen card should be centered
 webpage should look ok on small screen 320px and larger screens 1400px
+first breakpoint will be around 800px
 */
 
 @font-face {
@@ -23,6 +24,7 @@ webpage should look ok on small screen 320px and larger screens 1400px
 /*------------------------------------------CUSTOM VARIABLES---------------------------------- */
 :root {
   --small-font: 1rem;
+  --small-margin: 1rem;
 
   --white: #ffffff;
   --stone-100: #f3e6d8;
@@ -33,15 +35,114 @@ webpage should look ok on small screen 320px and larger screens 1400px
   --rose-800: #7b284f;
   --rose-50: #fff5fa;
 }
+/*------------------------------------------GENERAL STYLES------------------------------------------ */
+body {
+  font-size: 1rem;
+}
+h2.brown-font {
+  font-family: "young-serif", sans-serif;
+  color: var(--brown-800);
+}
 
+p,
+li,
+table {
+  font-size: 0.8rem; /*paragraph,li,table text should be 16px on mobile */
+}
+
+img {
+  width: 100%;
+  object-fit: cover; /*maintain quality of image upon resize */
+
+  margin-bottom: var(--small-margin);
+}
+ul,
+ol,
+table {
+  /*on mobile the ul,ol and table are aligned, so i'll give them the same margin-left value */
+
+  margin-left: 1rem;
+}
+
+/*creates space between the bullet points/the ordered list numbers and the text,
+the bullet points and the order number will be positioned outside
+the text should be pushed to the left via padding creating space between the bullet points/ordered numbers and the actual  text
+*/
+ol,
+ul {
+  list-style-position: outside;
+}
+
+ol li,
+ul li {
+  padding-left: 1em;
+}
+
+li {
+  margin-top: var(--small-margin);
+  color: var(--stone-600);
+
+  font-family: "Outfit", sans-serif;
+}
+
+.light-bold {
+  font-weight: 700; /*adds some boldness to the span ele
+  without adding it to the rest of the li */
+}
+
+hr {
+  margin: 1.5rem 0 1.5rem 1em; /*reason for em on the left is to make sure the hr and the section are aligned(see padding on card) */
+  border-color: var(--stone-100); /*gives a color to the horizontal line */
+}
 /*------------------------------------------CONTAINER STYLES----------------------------------  */
 
 /*------------------------------------------CARD STYLES----------------------------------  */
-h1.intro-title {
-  font-family: "Outfit", sans-serif;
-  /*  font-family: "young-serif , sans-serif"; */
-  /* font-weight: 1000; */
+
+.card section {
+  /*every section should have right/bottom/left padding */
+  padding: 0 1em 1em 1em; /*on mobile there's no top padding, and the images touches the left and right edges of card */
 }
+
+/*-------------------------------------CARD INTRO SECTION STYLES---------------------------------- */
+.intro-title {
+  margin-bottom: var(--small-margin);
+  font-family: "young-serif", sans-serif;
+  color: var(--stone-900);
+}
+.intro-info {
+  font-family: "Outfit", sans-serif;
+  color: var(--stone-600);
+}
+
+/*-------------------------------------CARD PREPARATION SECTION STYLES---------------------------------- */
+.card__preparation-section.pink-bg {
+  margin: 0 var(--small-margin) 1rem;
+  background-color: var(--rose-50);
+}
+.preparation-title.pink-font {
+  padding-top: 0.75em;
+  font-family: "Outfit", sans-serif;
+  color: var(--rose-800);
+}
+.card__preparation-section ul li::marker {
+  /*makes the bullet points a pink  */
+  color: var(--rose-800);
+}
+/*-------------------------------------CARD INGREDIENT SECTION STYLES---------------------------------- */
+.card__ingredient-section ul li::marker {
+  /*makes the bullet points pink  */
+  color: var(--brown-800);
+}
+
+/*-------------------------------------CARD INSTRUCTION SECTION STYLES---------------------------------- */
+
+.card__instruction-section ol li::marker {
+  /*make the number for the ol brown */
+  color: var(--brown-800);
+  font-weight: 800; /*increase their weight to match design spec */
+}
+
+/*-------------------------------------CARD NUTRITION SECTION STYLES---------------------------------- */
 
 /*Attribution STYLES:(WON'T be centered on mobile) */
 
