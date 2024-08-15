@@ -143,6 +143,44 @@ hr {
 }
 
 /*-------------------------------------CARD NUTRITION SECTION STYLES---------------------------------- */
+.card__nutrition-section p {
+  margin: var(--small-margin) 0;
+
+  /*the outfit font family causes p text to wrap onto an extra line(instead of 2 lines i now have a third one) */
+  font-family: "Outfit", sans-serif;
+
+  color: var(--stone-600);
+}
+
+table {
+  border-collapse: collapse; /*in order to actually see the border i'll set on the tr */
+
+  /*when making table a 100% width, the second col of table is then pushed to the right */
+  width: 100%;
+}
+
+table tr:not(:last-of-type) {
+  /*apply styles to all tr except the last one*/
+
+  border-bottom: 1px solid var(--stone-600);
+}
+
+table td {
+  /*add space to each td, this creates space between rows*/
+  padding: 1em 0;
+
+  color: var(--stone-600); /*td first col  has lighter font */
+}
+
+table tr td + td {
+  /*select the table cell that has a cell before it(to the left)
+  these styles will only be applied to 2second col and will overwrite previous styles(second column has bold font)
+  */
+
+  font-family: "Outfit", sans-serif;
+  color: var(--brown-800);
+  font-weight: 700;
+}
 
 /*Attribution STYLES:(WON'T be centered on mobile) */
 
