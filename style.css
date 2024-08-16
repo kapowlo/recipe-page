@@ -95,8 +95,19 @@ hr {
   border-color: var(--stone-100); /*gives a color to the horizontal line */
 }
 /*------------------------------------------CONTAINER STYLES----------------------------------  */
+.container {
+  padding: 1em; /*added some padding so card doesn't touch edges */
+  /* border: 4px solid red; */
+  background-color: #ffe4c4; /*color is somewhat similar to design specs, on mobile i might have to remove this depending on result */
+}
 
 /*------------------------------------------CARD STYLES----------------------------------  */
+.card {
+  /* border: 2px solid dodgerblue; */
+
+  /*forgot to set the bg color for card earlier*/
+  background-color: var(--white);
+}
 
 .card section {
   /*every section should have right/bottom/left padding */
@@ -146,7 +157,9 @@ hr {
 .card__nutrition-section p {
   margin: var(--small-margin) 0;
 
-  /*the outfit font family causes p text to wrap onto an extra line(instead of 2 lines i now have a third one) */
+  /*the outfit font family causes p text to wrap onto an extra line(instead of 2 lines i now have a third one)
+  it increases the height of the paragraph from 36 to 60 thats why the paragraph wraps onto the next line
+  */
   font-family: "Outfit", sans-serif;
 
   color: var(--stone-600);
@@ -185,9 +198,18 @@ table tr td + td {
 /*Attribution STYLES:(WON'T be centered on mobile) */
 
 .attribution {
-  font-size: 11px;
+  padding-top: 1em;
+  font-size: 13px;
   text-align: center;
+
+  color: black;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: black;
 }
+.attribution a:hover {
+  opacity: 0.5;
+}
+
+/*-------------------------------------MEDIA QUERIES----------------------------------  */
+/*FIRST BREAKPOINT AROUND 800PX */
