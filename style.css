@@ -229,6 +229,10 @@ table tr td + td {
     padding: 1em 1em 0 1em;
     border-radius: 30px;
   }
+  .intro-title {
+    font-size: 1.9rem; /* the h1 should be bigger than the h2 */
+  }
+
   .card__instruction-section li {
     max-width: 98%; /*added this cuz the li of instruction section are too close to the right edge */
   }
