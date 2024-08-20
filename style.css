@@ -215,7 +215,8 @@ table tr td + td {
 
 @media screen and (min-width: 800px) {
   .container {
-    padding-top: 3em; /*add some space inside of container  */
+    padding-top: 6em; /*add some space inside of container  */
+    padding-bottom: 3em;
     background-color: var(--container-bg-color);
 
     display: flex;
@@ -254,6 +255,10 @@ table tr td + td {
   .card {
     max-width: 900px;
   }
+  .intro-title {
+    font-size: 2.5rem; /* further increase size of h1 on large screen */
+  }
+
   .card p,
   .card li,
   table td {
