@@ -114,6 +114,7 @@ hr {
 .intro-title {
   margin-bottom: var(--small-margin);
   font-family: "young-serif", sans-serif;
+  font-weight: 500; /*reduce the default font-weight that is h1 ele */
   color: var(--stone-900);
 }
 .intro-info {
@@ -214,7 +215,7 @@ table tr td + td {
 
 @media screen and (min-width: 800px) {
   .container {
-    padding-top: 1.45em; /*add some space inside of container  */
+    padding-top: 3em; /*add some space inside of container  */
     background-color: var(--container-bg-color);
 
     display: flex;
@@ -244,7 +245,7 @@ table tr td + td {
     font-family: "Outfit", sans-serif; /*increased max-width of card now i can use this font on nutrition p */
   }
   .attribution {
-    padding-bottom: 1em;
+    padding-bottom: 3em;
     font-size: 0.75rem;
   }
 }
